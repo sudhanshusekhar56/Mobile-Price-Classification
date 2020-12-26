@@ -20,22 +20,23 @@
     </div>
     <div class="container">
         <div class="inp">
-            <form action="">
+            <form action="/pred" method="POST">
                 <span>RAM</span><input type="text" id="" name="rm" class="no-outline"><br>
                 <span>Pixel Width</span><input type="text" id="" name="pw" class="no-outline"><br>
                 <span>Pixel Height</span><input type="text" id="" name="ph" class="no-outline"><br>
                 <span>Battery Capacity</span><input type="text" id="" name="bc" class="no-outline"><br>
                 <span>Internal Storage</span><input type="text" id="" name="is" class="no-outline"><br>
             </form>
-            <button class="smt">Submit</button>
+            <input type="submit" value="Predict" id="predict" class="smt">
         </div>
         <div class="line"></div>
         <div class="out">
             <p>It's a</p>
-            <h2>Midranger</h2>
+            <h2> {{result}} </h2>
         </div>
     </div>
-    <footer>hello</footer>
+    <div class="h"></div>
+    <footer>🍁ganja-ganja</footer>
 </body>
 
 </html>

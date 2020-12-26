@@ -1,7 +1,6 @@
 body{
-    background-image: url("../templates/bg.png");
+    background-image: url("../static/img/bg.png");
     color: #2c2c2c;
-    height: 1080px;
 }
 
 input {
@@ -42,7 +41,7 @@ input {
 }
 .heading{
   text-align: center;
-  margin-top: 12%;
+  margin-top: 11.5%;
   font-size:  140%;;
   font-family: 'Open Sans', sans-serif;
   margin-bottom: 130px;
@@ -78,4 +77,12 @@ h2{
 }
 .smt:focus{
   outline: none;
+}
+.h{
+  margin-top: 31%;
+}
+footer{
+  text-align: center;
+  color: #2c2c2c;
+  font-size: 120%;
 }
