@@ -1,4 +1,5 @@
 from flask import Flask, render_template, request
+import numpy as np
 import pickle
 
 app = Flask(__name__)
@@ -18,15 +19,23 @@ def predict():
         add = open('model.pkl', 'rb')
         model = pickle.load(add)
 
-        ram = int(request.form['rm'])
-        pw = int(request.form['pw'])
-        ph = int(request.form['ph'])
-        bc = int(request.form['bc'])
-        ints = int(request.form['is'])
+        ram = int(float(request.form['rm']))
+        pw = int(float(request.form['pw']))
+        ph = int(float(request.form['ph']))
+        bc = int(float(request.form['bc']))
+        ints = int(float(request.form['is']))
 
         data = [[ram, bc, pw, ph, ints]]
-        print(data)
-        res = model.predict(data)
+        r = model.predict(data)
+        print(r)
+
+        if r == 1:
+            res = "Low Budget Device"
+        if r == 2:
+            res = "Mid Range Device"
+        if r == 3:
+            res = "High-end Device"
+
         return render_template('home.html', result=res)
 
 

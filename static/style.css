@@ -25,6 +25,9 @@ input {
   width: 450px;
   margin-right: 40px;
 }
+input:focus{
+  display:none;
+}
 
 .out{
   float: left;
